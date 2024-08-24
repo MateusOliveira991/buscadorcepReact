@@ -15,7 +15,7 @@ function App() {
           <button>Buscar</button>
           </div>
           <div className="main">
-            <h2>31744775</h2>
+            <h2>Cep: 31744775</h2>
             <span>Rua tal tal tal</span>
             <span>Bairro tal tal tal</span>
             <span>Cidade tal tal tal</span>
