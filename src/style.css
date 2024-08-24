@@ -1,47 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: url('assets/mundo.png') no-repeat center center fixed; 
+    background-size: cover;
+    color: #fff;
+}
+
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #166a46;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
 }
 
 h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #06ef7b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.button {
-    margin-left: 5px;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #15e612;
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .input {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-right: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgb(182, 211, 168);
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #179054;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #32cd32;
 }
 
 .main {
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-top: 2rem;
+    color: #000;
 }
 
-
+.main h3, .main span {
+    margin-bottom: 0.5rem;
+}
