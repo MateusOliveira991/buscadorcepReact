@@ -4,6 +4,7 @@ import api from "./services/api";
 
 function App() {
   const [input, setInput] = useState("");
+  const [cep, setCep] = useState({});
 
   async function handleSearch() {
     if (input === '') {
@@ -12,6 +13,9 @@ function App() {
     }
     try {
       const response = await api.get(`/${input}/json/`);
+      setCep(response.data);
+      setInput("");
+
       if(response.data.erro){
         alert("CEP não encontrado");
         setInput("");
@@ -42,11 +46,11 @@ function App() {
           </button>
         </div>
         <div className="main">
-          <h2>Cep: 31744775</h2>
-          <span>Rua tal tal tal</span>
-          <span>Bairro tal tal tal</span>
-          <span>Cidade tal tal tal</span>
-          <span>Estado tal tal tal</span>
+          <h2>Cep: {cep.cep}</h2>
+          <span>{cep.logradouro}</span>
+          <span>{cep.bairro}</span>
+          <span>{cep.localidade}</span>
+          <span>{cep.uf}</span>
         </div>
       </div>
     </>
