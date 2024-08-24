@@ -45,13 +45,19 @@ function App() {
             Buscar
           </button>
         </div>
-        <div className="main">
-          <h2>Cep: {cep.cep}</h2>
+
+        {Object.keys(cep).length > 0 && (
+          <div className="main">
+          <h2>Cep:{cep.cep}</h2>
           <span>{cep.logradouro}</span>
           <span>{cep.bairro}</span>
           <span>{cep.localidade}</span>
           <span>{cep.uf}</span>
         </div>
+        )
+        }
+
+        
       </div>
     </>
   );
