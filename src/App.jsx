@@ -19,7 +19,8 @@ function App() {
       if(response.data.erro){
         alert("CEP não encontrado");
         setInput("");
-        return;
+        setCep({});
+        
       };
     }catch{
       alert("CEP Inválido");
@@ -48,11 +49,11 @@ function App() {
 
         {Object.keys(cep).length > 0 && (
           <div className="main">
-          <h2>Cep:{cep.cep}</h2>
+          <h3>Cep:{cep.cep}</h3>
           <span>{cep.logradouro}</span>
-          <span>{cep.bairro}</span>
-          <span>{cep.localidade}</span>
-          <span>{cep.uf}</span>
+          <span>Bairro: {cep.bairro}</span>
+          <span>Cidade: {cep.localidade} - {cep.uf}</span>
+          
         </div>
         )
         }
